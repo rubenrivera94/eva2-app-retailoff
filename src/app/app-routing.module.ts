@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'map',
     loadChildren: () => import('./pages/main/map/map.module').then(m => m.MapPageModule)
   },
+  {
+    path: 'aws',
+    loadChildren: () => import('./pages/aws/aws/aws.module').then( m => m.AwsPageModule)
+  },
 
 ];
 

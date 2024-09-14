@@ -12,6 +12,7 @@ import { Storage } from '@ionic/storage';
 // ===== Firebase =====
 import { AngularFireModule } from '@angular/fire/compat';  // Importa el módulo principal de AngularFire para Firebase
 import { environment } from 'src/environments/environment.prod';  // Importa la configuración de entorno para Firebase
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],  // Declara los componentes principales de la app
@@ -24,6 +25,7 @@ import { environment } from 'src/environments/environment.prod';  // Importa la 
     // ===== Inicialización de Firebase =====
     // Inicializa Firebase con la configuración del entorno de producción que contiene las claves API y otras configuraciones.
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    HttpClientModule
   ],
 
   providers: [
